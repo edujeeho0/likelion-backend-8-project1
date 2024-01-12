@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>새 게시글 작성하기</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="p-3">
+<div class="d-flex align-items-center">
+  <h1 class="me-3">게시글 작성</h1>
+  <a class="fs-3" href="/board">뒤로가기</a>
+</div>
+<hr>
+<form action="/article" method="post">
+  <div class="mb-3">
+    <label for="title-input" class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" id="title-input">
+  </div>
+  <div class="mb-3">
+    <label for="content-area" class="form-label">Content</label>
+    <textarea name="content" id="content-area" class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="password-input" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password-input">
+  </div>
+  <div class="mb-3">
+    <label for="board-select" class="form-label">게시판</label>
+    <select name="board-id" id="board-select" class="form-select">
+      <option disabled selected>게시판 고르기</option>
+      <option th:each="board: ${boards}" th:value="${board.id}" th:text="${board.name}"></option>
+    </select>
+  </div>
+  <input type="submit" value="Write" class="btn btn-primary">
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
