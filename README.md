@@ -21,11 +21,10 @@ SQLite를 사용하며, 테스트 데이터를 넣어주기 위한 `data.sql`가
 
 ### 테스트 데이터를 사용하지 않는 경우
 
-한번 프로젝트를 실행하고 종료 한 뒤 (`ddl-auto` 옵션으로 테이블 자동 생성 후)
-
-1. `spring.data.jpa.hibernate.ddl-auto`를 `none` 또는 `update`로 수정
+1. 한번 프로젝트를 실행하고 종료 (`ddl-auto` 옵션으로 테이블 자동 생성)
 2. `spring.data.jpa.defer-datasource-initialization`와 `spring.sql.init.mode` 설정 제거
-3. 이후 다시 실행
+3. `spring.data.jpa.hibernate.ddl-auto`를 `none` 또는 `update`로 수정
+4. 이후 정상적으로 프로젝트 실행
 
 ### JAR로 실행하는 경우 (Macos, Linux)
 
