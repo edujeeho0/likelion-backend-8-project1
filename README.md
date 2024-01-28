@@ -21,10 +21,11 @@ SQLite를 사용하며, 테스트 데이터를 넣어주기 위한 `data.sql`가
 
 ### 테스트 데이터를 사용하지 않는 경우
 
-1. 한번 프로젝트를 실행하고 종료 (`ddl-auto` 옵션으로 테이블 자동 생성)
+한번 프로젝트를 실행하고 종료 한 뒤 (`ddl-auto` 옵션으로 테이블 자동 생성 후)
+
+1. `spring.data.jpa.hibernate.ddl-auto`를 `none` 또는 `update`로 수정
 2. `spring.data.jpa.defer-datasource-initialization`와 `spring.sql.init.mode` 설정 제거
-3. `spring.data.jpa.hibernate.ddl-auto`를 `none` 또는 `update`로 수정
-4. 이후 정상적으로 프로젝트 실행
+3. 이후 다시 실행
 
 ### JAR로 실행하는 경우 (Macos, Linux)
 
@@ -53,4 +54,9 @@ CMD에서,
 - [게시글 기능](md/article.md)
 - [댓글 기능](md/comment.md)
 
+## 도전 과제
 
+- [해시태그 기능](md/hashtag.md)
+- [검색 기능](md/search.md)
+- [게시글 추가 기능 (이미지)](md/article_image.md)
+- [게시글 추가 기능 (이전글, 다음글)](md/article_navigate.md)

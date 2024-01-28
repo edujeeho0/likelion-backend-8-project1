@@ -31,6 +31,12 @@ public class Article {
     @OneToMany(mappedBy = "article")
     private final List<Comment> comments = new ArrayList<>();
 
+    @OneToMany(mappedBy = "article")
+    private final List<ArticleHashtag> hashtags = new ArrayList<>();
+
+    @OneToMany(mappedBy = "article")
+    private final List<ArticleImage> images = new ArrayList<>();
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

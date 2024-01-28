@@ -3,7 +3,6 @@ package com.example.community;
 import com.example.community.dto.BoardDto;
 import com.example.community.entity.Board;
 import com.example.community.repo.BoardRepository;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
